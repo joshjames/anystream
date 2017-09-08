@@ -1,0 +1,29 @@
+notes
+
+
+
+Core Service
+Get_Media.js
+jf.readFile('/path/to/file.json', function(err, obj) {
+  // obj contains JSON data
+});
+
+
+
+Function GetMovieSource(imdbID,title,year)
+
+#first check YTS API.
+curl https://yts.ag/api/v2/list_movies.json?query_term=$imdbID
+
+#Check only 1 result
+curl -s https://yts.ag/api/v2/list_movies.json?query_term=tt0107688 > ytsquery.json
+moviecount = `cat ytsquery | jq .data.movie_count`
+if $moviecount = 1
+    #we have a result get the hash and get from furk
+    HASH= `cat ytsquery.json | jq .data.movies.torrents.hash
+    curl -v https://www.furk.net/api/plugins/metasearch -d 'api_key=de38830f07a3bb95e5a5e4741216c08e1aa7b3a5;q=$HASH;pretty=1' > dl.json
+
+
+
+
+function getTVsource(movie_db_id,title)
