@@ -8,7 +8,7 @@ var request = require("request")
 var require ('express')
 
 //yts API base
-var url = "https://yts.ag/api/v2/list_movies.json?query_term=";
+var YTSAPI = "https://yts.ag/api/v2/list_movies.json?query_term=";
 
 // FURK API BASE
 
@@ -18,6 +18,7 @@ var furkAPI = https://www.furk.net/api/plugins/metasearch -d 'api_key=de38830f07
 //amend url
 url += imdbID;
 
+//sql query for video ID
 sql = "SELECT * FROM `video` WHERE id=" + VideoID;
 
 //queryDB for videoID
@@ -29,6 +30,36 @@ con.connect(function(err) {
       console.log("Result: " + result);
     });
   });
+
+//filter array get values we need.
+
+var video[];
+var video.class = result[class];
+var video.imidbid = result[imdbid];
+var video.movieDBid = result[api_id];
+var video.title = result[title];
+var video.year = result[release_date];
+var video.year = (video.year strip date(YYYY);)
+var video.airdate = result[air_date];
+var video.seasonnum = result[season_number];
+var video.episodenum = result[episode_number];
+var video.showid = result[show_id]
+
+
+//core logic.
+
+//1 decide if movie or show
+
+if video.class = streama.movie
+    {
+        getmovie(video.imdbid)
+
+    }
+if video.class = streama.show
+    {
+        //get additional show info
+        getshow(video.title,video.seasonnum,video.episodenum,video.showid)
+    }
 
 
 
@@ -48,18 +79,7 @@ function getValues(obj, key) {
 
 
 
-console.log("sending URL request of", url);
 
-request({
-    url: url,
-    json: true
-}, function (error, response, body) {
-
-    if (!error && response.statusCode === 200) {
-        console.log(body) // Print the json response
-    }
-})
-var obj = JSON.parse(response);
 
 //console.log(webdata);
 
@@ -67,10 +87,33 @@ var obj = JSON.parse(response);
 //var obj = require('./furk.search.json');
 
 
-var id = (getValues(obj,'id'));
+
 
 
 var id = JSON.stringify(id).replace(/[\[\]"]+/g,'')
 
 
-console.log(id);
+
+function getmovie(imdbID,title,year)
+{
+    queryYTS(imdbid)
+        if queryYTS(result = null)
+            {
+                queryFURK(video.title,video.year)
+            }
+    queryFURK(hash)
+    getfile(furkURL)
+
+
+}
+
+
+
+
+
+function getfile(URL)
+{
+    \\file download URL
+    \\save to location
+
+}
