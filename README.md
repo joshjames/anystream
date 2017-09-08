@@ -19,5 +19,7 @@ this repository will be made up of several main components.
       this uses the anystream (streama) video I.D to do a lookup.
       the video table has everything it needs. (id, api_id, imdb_id, class (streama.movie, streama.episode), name, title, season number, release date)
       at its core functionality a webservice call to getmedia?videoId=123 will kick off a function like so.
-      *INSTERT FLOW DIAGRAM*
+  
+![flowdiagram](https://github.com/joshjames/anystream/blob/master/anystream_diagram.png "file getter")   
+     
       
