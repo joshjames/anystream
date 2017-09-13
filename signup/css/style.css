@@ -36,8 +36,8 @@ body {
   left: 0;
   box-sizing: border-box;
   padding: 40px;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 700px;
 }
 
 h1 {
@@ -73,7 +73,7 @@ input[type="submit"] {
   margin-top: 28px;
   width: 120px;
   height: 32px;
-  background: #16a085;
+  background: #5C5D5D;
   border: none;
   border-radius: 2px;
   color: #FFF;
@@ -134,7 +134,7 @@ input[type="submit"]:active {
 
 button.social-signin {
   margin-bottom: 20px;
-  width: 220px;
+  width: 200px;
   height: 36px;
   border: none;
   border-radius: 2px;
