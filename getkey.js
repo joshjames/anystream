@@ -47,7 +47,7 @@ function getKeys(obj, val) {
     return objects;
 }
 
-var json = require('./furk.search.json');
+var json = require('./furk.search_result_example.json');
 //var json = '{"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","ID":"44","str":"SGML","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}}}';
 
 var js = JSON.parse(json);
