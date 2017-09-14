@@ -1,19 +1,44 @@
-<img src='logo.png' style='position:absolute; top:0; left:0;' width='280' height='40' alt='logo' />
-<div class="span3">
+
+<link href="astream.css" rel="stylesheet" type="text/css" />
+<div>
+<img src='logo.png' />
+</div>
+<div>
     <h2>Sign Up for Anystream</h2>
     <form>
-    <label>First Name</label>
-    <input type="text" name="firstname" class="span3">
-    <label>Last Name</label>
-    <input type="text" name="lastname" class="span3">
-    <label>Email Address</label>
-    <input type="email" name="email" class="span3">
-    <label>Username</label>
-    <input type="text" name="username" class="span3">
-    <label>Password</label>
-    <input type="password" name="password" class="span3">
-    <label><input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</label>
-    <input type="submit" value="Sign up" class="btn btn-primary pull-right">
-    <div class="clearfix"></div>
+First Name
+    <input type="text" name="firstName"><br>
+Last Name
+    <input type="text" name="lastName"><br>
+Email Address
+    <input type="email" name="email"><br>
+Username
+    <input type="text" name="userName"><br>
+Password
+    <input type="password" name="password"><br>
+<input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.<br>
+    <input type="submit" value="Next" class="btn btn-primary pull-right">
     </form>
+</div>
+<div>
+    <h2>Choose Anystream Plan</h2>
+    <form>
+      <input type="checkbox" name="plan1"> Plan1 <br>
+      <input type="checkbox" name="plan2"> Plan2 <br>
+      <input type="submit" value="Next" class="btn btn-primary pull-right">
+    </form>
+</div>
+<div>
+<h2>Payment Options</h2>
+<h3>Card Details</h3>
+<form>
+Card Type <input type="text" name="cardType"><br>
+Card Number <input type="text" name="cardNo"><br>
+Exp Date month <input type="text" name="expM"> year <input type="text" name="expY"><br>
+CVV <input type="text" name="cVV"><br>
+<h3>Card Holders Details</h3>
+Name <input type="text" name="cardName"><br>
+Address <input type="text" name="cardAddress"><br>
+<input type="submit" value="Next" class="btn btn-primary pull-right">
+</form>
 </div>
