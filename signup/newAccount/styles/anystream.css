@@ -9,13 +9,14 @@ body{
 
 .container{
   width: 500px;
-  height: 750px;
+  height: 100%;
   text-align: center;
   background-color: rgba(33, 33, 33,1.0);
   margin: 0 auto;
   margin-top: 150px;
   margin-bottom: 30px;
   border-radius: 4px;
+  padding-bottom: 30px;
 }
 .container img{
   height: 81px;
@@ -43,7 +44,8 @@ input[type=email]{
   padding-left: 30px;
 }
 
-.formInput::before{
+.formInput::before,
+.cardNameInput::before{
   content:"\f007";
   position: absolute;
   font-family: "FontAwesome";
@@ -53,12 +55,63 @@ input[type=email]{
   color: rgba(44, 62, 80,0.7);
 }
 
-.formInput:nth-child(9)::before{
-  content:"\f1fa"
+.emailInput::before{
+  content:"\f1fa";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  padding-left: 6px;
+  padding-top: 6px;
+  color: rgba(44, 62, 80,0.7);
 }
 
-.formInput:nth-child(10)::before, .formInput:nth-child(11)::before{
-  content:"\f023"
+.passwordInput::before{
+  content:"\f023";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  padding-left: 6px;
+  padding-top: 6px;
+  color: rgba(44, 62, 80,0.7);
+}
+
+.cardDateInput::before{
+  content:"\f073";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  padding-left: 6px;
+  padding-top: 6px;
+  color: rgba(44, 62, 80,0.7);
+}
+
+.cardNumberInput::before{
+  content:"\f09d";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  padding-left: 6px;
+  padding-top: 6px;
+  color: rgba(44, 62, 80,0.7);
+}
+.cardCVVInput::before{
+  content:"\f283";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  padding-left: 6px;
+  padding-top: 6px;
+  color: rgba(44, 62, 80,0.7);
+}
+
+.cardAddressInput::before{
+  content:"\f2bb";
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 24px;
+  padding-left: 6px;
+  padding-top: 6px;
+  color: rgba(44, 62, 80,0.7);
 }
 
 .formSubmit{
@@ -66,7 +119,7 @@ font-size: 16px;
 }
 
 .signInFacebook{
-    color: #32508E;
+    color: #3b5998;
     padding: 0;
     margin-left: -50px;
     border: 0;
@@ -74,7 +127,7 @@ font-size: 16px;
 }
 
 .signInTwitter{
-    color: #55ACEE;
+    color: #1da1f2;
     padding: 0;
     margin-left: 25px;
     margin-right: 25px;
@@ -83,17 +136,59 @@ font-size: 16px;
 }
 
 .signInGoogle{
-  color: #DD4B39;
+  color: #dd4b39;
   padding: 0;
   margin-right: -50px;
   border: 0;
   border-radius: 11px;
 }
 
+.payPayPal{
+    color: rgba(236, 240, 241,1.0);
+    background-color: #009cde;
+    padding: 0;
+    border: 0;
+    border-radius: 11px;
+}
+
+.payVisa{
+    color: rgba(236, 240, 241,1.0);
+    background-color: #1a1f71;
+    padding: 0;
+    border: 0;
+    border-radius: 11px;
+}
+
+.payMaster{
+    color: rgba(236, 240, 241,1.0);
+    background-color: #cc0000;
+    padding: 0;
+    border: 0;
+    border-radius: 11px;
+}
+.cardCVVInput input{
+  width: 100px;
+  padding-left: 40px;
+}
+.cardDateInput input{
+  width: 129px;
+  padding-left: 40px;
+}
+
+.cardNumberInput input{
+  padding-left: 40px;
+}
+
+.cardNameInput input{
+  padding-left: 40px;
+}
+.cardAddressInput input{
+  padding-left: 40px;
+}
 button {
   border: none;
   border-radius: 2px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
   padding: 0px 0px 0px 0px;
 }
 
@@ -115,4 +210,5 @@ button[type=submit]{
   padding: 6px 8px 6px 8px;
   border: 0;
   border-radius: 4px;
+  color: rgba(44, 62, 80,0.7);
 }

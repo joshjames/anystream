@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anystream Payment</title>
+  <link rel="stylesheet" href="./styles/anystream.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <img src="img/logo.png">
+    <form>
+      <div class="planInput">
+        <input type="checkbox" name="plan1"><p>$14.95/month Anystream Basic, Anystream limited to a single device at a time.</p>
+      </div>
+      <div class="planInput">
+        <input type="checkbox" name="plan2"><p>$19.95/month Anystream Plus, watch Anystream on up to 2 devices simultaneously.</p>
+      </div>
+      <p>
+        Complete Payment via...
+      </p>
+      <button class="payPayPal"><i class="fa fa-cc-paypal  fa-5x" aria-hidden="true"></i></button>
+      <p>
+        Or credit card.
+      </p>
+    <div>
+<button class="payVisa"><i class="fa fa-cc-visa  fa-5x" aria-hidden="true"></i></button>
+<button class="payMaster"><i class="fa fa-cc-mastercard  fa-5x" aria-hidden="true"></i></button>
+    </div>
+    <div class="cardNumberInput">
+      <input type="text" name="cardNo" placeholder="Card Number">
+    </div>
+    <div class="cardCVVInput">
+      <input type="text" name="cvvNo" placeholder="CVV">
+    </div>
+    <div class="cardDateInput">
+      <input type="text" name="cardMonth" placeholder="Month">
+      <input type="password" name="cardYear" placeholder="Year">
+    </div>
+    <div class="cardNameInput">
+      <input type="text" name="cardName" placeholder="Card Holder's Name">
+    </div>
+    <div class="cardAddressInput">
+      <input type="text" name="cardAddress" placeholder="Card Holder's Address">
+    </div>
+    <div class="formSubmit">
+      <input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</br>
+      <button type="submit" name="paymentConfirm">Confirm</button>
+    </div>
+    </form>
+  </div>
+</body>
+</html>
